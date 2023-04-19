@@ -187,6 +187,7 @@ func (m *Manager) ModifyMachine(ctx context.Context, vm *Machine) error {
 		"--largepages", vm.Flag.Get(LARGEPAGES),
 		"--vtxvpid", vm.Flag.Get(VTXVPID),
 		"--vtxux", vm.Flag.Get(VTXUX),
+		"--nested-hw-virt", vm.Flag.Get(NSTHWVRT),
 		"--accelerate3d", vm.Flag.Get(ACCELERATE3D),
 	}
 
@@ -275,6 +276,7 @@ const (
 	VTXVPID
 	VTXUX
 	ACCELERATE3D
+        NSTHWVRT
 )
 
 // Convert bool to "on"/"off"
