@@ -9,8 +9,7 @@ import (
 	"strings"
 	"sync"
 	"time"
-
-	"github.com/terra-farm/go-virtualbox"
+	"github.com/andreaf74/go-virtualbox"
 )
 
 var (
