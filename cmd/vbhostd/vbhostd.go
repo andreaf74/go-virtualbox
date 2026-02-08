@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+        "os/exec"
 	"regexp"
 	"strings"
 	"sync"
@@ -15,6 +16,12 @@ import (
 var (
 	openRegexp = regexp.MustCompile("^(http|https|mailto):")
 )
+
+
+func open(args ...string) *exec.Cmd {
+        return exec.Command("open", args...) // #nosec
+}
+
 
 func main() {
 	vm := flag.String("vm", "all", "VM to wait events from (all)")
